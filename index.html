@@ -12,7 +12,7 @@
     <div class="profile-box">
       <img src="https://placeimg.com/200/200/any" alt="profile pic">
       <h3>Leora D. Harrison</h3>
-      <h4>leora@ac.io</h4>
+      <h4>leora@ac.io, Game Design, UI/UX</h4>
       <div class="btn-container">
         <span class="profile-btn" id="assign"><i class="far fa-clipboard"></i></i>Assign</span>
         <span class="profile-btn" id="view"><i class="far fa-eye"></i>view</span>
@@ -21,9 +21,9 @@
     <div class="profile-box">
       <img src="https://placeimg.com/200/200/animal" alt="profile pic">
       <h3>Eric C. Holman</h3>
-      <h4>eric@ac.io</h4>
+      <h4>eric@ac.io, Game Design</h4>
       <div class="btn-container">
-        <span class="profile-btn" id="assign"><i class="far fa-clipboard"></i></i>Assign</span>
+        <span class="profile-btn" id="assign"><i class="far fa-clipboard"></i></i><a href="#">Behance</a></span>
         <span class="profile-btn" id="view"><i class="far fa-eye"></i>view</span>
       </div>
     </div>
@@ -129,12 +129,19 @@
 		    console.log(li[1]);
 		    for (i = 0; i < li.length; i++) {
 		        a = li[i].getElementsByTagName("h3")[0];
+            b = li[i].getElementsByTagName("h4")[0];
 		        txtValue =a.innerText;
+            txtValue2=b.innerText;
 		        if (txtValue.toUpperCase().indexOf(filter) > -1) {
 		            li[i].style.display = "";
 		        } else {
 		            li[i].style.display = "none";
 		        }
+            if (txtValue2.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
 		    }
 		}
 	</script>
