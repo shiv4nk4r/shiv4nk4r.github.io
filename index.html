@@ -125,7 +125,8 @@
 		    input = document.getElementById("searchField");
 		    filter = input.value.toUpperCase();
 		    ul = document.getElementById("myUL");
-		    li = ul.getElementsByTagName("div");
+		    li = ul.getElementsByClassName("profile-box");
+		    console.log(li[1]);
 		    for (i = 0; i < li.length; i++) {
 		        a = li[i].getElementsByTagName("h3")[0];
 		        txtValue =a.innerText;
