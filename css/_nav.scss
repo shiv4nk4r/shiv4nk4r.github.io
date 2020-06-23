@@ -106,9 +106,11 @@ input::-webkit-input-placeholder {
     }
     .nav-content {
       flex: 2;
+      padding: 2rem 0rem 0rem 0rem;
       flex-direction: column;
       justify-content: space-around;
       ul {
+        padding: 2rem 0rem 0rem 0rem;
         flex: 1;
         align-items: flex-end;
         li {
