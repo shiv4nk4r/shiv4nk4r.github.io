@@ -3,6 +3,7 @@
 }
 
 nav {
+  position: sticky;
   width: 80%;
   margin: auto;
   min-height: 10vh;
@@ -91,4 +92,20 @@ input:-moz-placeholder {
 }
 input::-webkit-input-placeholder {
   color: #999;
+}
+
+@media only screen and (max-width: 1000px) {
+  nav {
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #logo {
+      flex: 1;
+    }
+    ul {
+      flex: 1;
+    }
+  }
 }
