@@ -105,10 +105,12 @@ input::-webkit-input-placeholder {
       flex: 1;
     }
     .nav-content {
+      flex: 2;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-around;
       ul {
         flex: 1;
+        align-items: flex-end;
         li {
           i {
             display: none;

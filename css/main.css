@@ -196,18 +196,23 @@ input::-webkit-input-placeholder {
             flex: 1;
   }
   nav .nav-content {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   nav .nav-content ul {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
   nav .nav-content ul li i {
     display: none;
