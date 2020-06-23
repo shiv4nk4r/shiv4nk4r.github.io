@@ -70,46 +70,6 @@ nav {
           align-items: center;
 }
 
-nav ul {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  list-style: none;
-}
-
-nav ul li {
-  padding: 0rem 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-nav ul li a:hover {
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  color: #2ecc71;
-}
-
-nav ul li i {
-  padding: 0rem 0.5rem;
-  font-size: 2rem;
-  color: #252525;
-}
-
 nav #logo {
   -webkit-box-flex: 2;
       -ms-flex: 2;
@@ -130,6 +90,46 @@ nav #logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.nav-content ul {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+}
+
+.nav-content ul li {
+  padding: 0rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.nav-content ul li a:hover {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  color: #2ecc71;
+}
+
+.nav-content ul li i {
+  padding: 0rem 0.5rem;
+  font-size: 2rem;
+  color: #252525;
 }
 
 input {
@@ -182,6 +182,7 @@ input::-webkit-input-placeholder {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    min-height: 20vh;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -194,10 +195,28 @@ input::-webkit-input-placeholder {
         -ms-flex: 1;
             flex: 1;
   }
-  nav ul {
+  nav .nav-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  nav .nav-content ul {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+  }
+  nav .nav-content ul li i {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 50%;
   }
 }
 /*# sourceMappingURL=main.css.map */
