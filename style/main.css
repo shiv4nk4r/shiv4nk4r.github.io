@@ -161,6 +161,20 @@ main .content-full .text-content {
   font-weight: 300;
 }
 
+main .content-full .project-content {
+  width: 80%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 main .content-full:nth-child(even) {
   background-color: #141414;
 }

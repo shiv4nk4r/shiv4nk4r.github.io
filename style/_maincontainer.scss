@@ -23,6 +23,13 @@ main {
       font-size: 2rem;
       font-weight: 300;
     }
+    .project-content {
+      width: 80%;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
   .content-full:nth-child(even) {
     background-color: #141414;
