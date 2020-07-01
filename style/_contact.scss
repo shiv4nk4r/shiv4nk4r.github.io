@@ -1,0 +1,33 @@
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 80%;
+  padding: 12px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  width: 20%;
+  background-color: #fff;
+  color: #141414;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  color: #fff;
+  transition: 0.2s ease;
+  background-color: #e53935;
+}
+
+.contact-me {
+  font-size: 4rem;
+  width: 80%;
+  padding: 20px;
+}

@@ -6,6 +6,7 @@ html {
   font-family: "Montserrat", sans-serif;
   font-size: 62.5%;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -17,3 +18,6 @@ body {
 @import "maincontainer";
 @import "scrollbar";
 @import "timeline";
+@import "skills";
+@import "contact";
+@import "nav";

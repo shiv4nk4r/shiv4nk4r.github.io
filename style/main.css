@@ -6,6 +6,7 @@ html {
   font-family: "Montserrat", sans-serif;
   font-size: 62.5%;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -148,7 +149,7 @@ main .content-full {
 
 main .content-full .title {
   width: 80%;
-  padding: 50px 0px;
+  padding: 100px 0px;
   color: #e53935;
   font-size: 10rem;
   font-weight: 300;
@@ -278,5 +279,155 @@ html {
   width: 11px;
   content: "";
   top: 5px;
+}
+
+.skill-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.skill-content .col {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.skill-content .col .card {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.skill-content .col .card .title {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.skill-content .col .card .skillbar {
+  width: 100%;
+  height: 7px;
+  background-color: #fff;
+}
+
+.skill-content .col .card .skillbar .fill {
+  height: 100%;
+  background-color: #e53935;
+}
+
+.skill-content .col .card .skillbar .fil::after {
+  width: attr(data-fill);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 80%;
+  padding: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  width: 20%;
+  background-color: #fff;
+  color: #141414;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  color: #fff;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  background-color: #e53935;
+}
+
+.contact-me {
+  font-size: 4rem;
+  width: 80%;
+  padding: 20px;
+}
+
+.nav-bar {
+  width: 100%;
+  margin: auto;
+  min-height: 10vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.96);
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-bar .title {
+  padding: 0px 20px;
+}
+
+.nav-bar .title a {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #e53935;
+}
+
+.nav-bar ul {
+  padding: 0px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+}
+
+.nav-bar ul li a {
+  color: #121212;
+  padding: 0px 10px;
+  font-size: 2rem;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.nav-bar ul li a:hover {
+  color: #e53935;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 /*# sourceMappingURL=main.css.map */
