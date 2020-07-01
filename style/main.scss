@@ -1,0 +1,19 @@
+*,
+body,
+html {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 62.5%;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+@import "landing";
+@import "maincontainer";
+@import "scrollbar";
+@import "timeline";

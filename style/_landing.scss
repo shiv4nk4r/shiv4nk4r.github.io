@@ -1,0 +1,57 @@
+.landing {
+  height: 100vh;
+  width: 100%;
+  background: white;
+  background-image: radial-gradient(#e53935 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -19px -19px;
+  animation: back-anim 4s infinite ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .logo {
+    text-align: left;
+    font-size: 6rem;
+    font-weight: 500;
+    color: #111;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 50px;
+    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+    animation: font-color 4s infinite ease;
+  }
+}
+
+@keyframes back-anim {
+  0% {
+    background-image: radial-gradient(#e53935 1px, transparent 0);
+    background-size: 40px 40px;
+    background-position: -19px -19px;
+  }
+  50% {
+    background-image: radial-gradient(#141141 1px, transparent 0);
+    background-size: 39px 39px;
+  }
+  100% {
+    background-image: radial-gradient(#e53935 1px, transparent 0);
+    background-size: 40px 40px;
+    background-position: -19px -19px;
+  }
+}
+
+@keyframes font-color {
+  0% {
+    color: #1b1b1b;
+  }
+  60% {
+    color: #e53935;
+  }
+  100% {
+    color: #1b1b1b;
+  }
+}

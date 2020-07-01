@@ -1,0 +1,34 @@
+main {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  .content-full {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #1b1b1b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .title {
+      width: 80%;
+      padding: 50px 0px;
+      color: #e53935;
+      font-size: 10rem;
+      font-weight: 300;
+    }
+    .text-content {
+      width: 80%;
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 300;
+    }
+  }
+  .content-full:nth-child(even) {
+    background-color: #141414;
+  }
+  .content-full:nth-child(odd) {
+    background-color: #1b1b1b;
+  }
+}
