@@ -1,7 +1,6 @@
 main {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
-  overflow-y: scroll;
   .content-full {
     scroll-snap-align: start;
     min-height: 100vh;
