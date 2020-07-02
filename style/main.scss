@@ -13,6 +13,12 @@ body {
   display: flex;
   flex-direction: column;
 }
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #e53935;
+}
 
 @import "landing";
 @import "maincontainer";
