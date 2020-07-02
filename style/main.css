@@ -296,6 +296,7 @@ html {
   width: 80%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding-bottom: 10%;
 }
 
 .skill-content .col {
@@ -437,5 +438,54 @@ input[type="submit"]:hover {
   color: #e53935;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 20vh;
+  background-color: #fff;
+  padding: 0px 10%;
+}
+
+.footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer div .title {
+  margin: 2% 0;
+  font-size: 4.5rem;
+  font-weight: 500;
+  color: #e53935;
+}
+
+.footer div .contact-details {
+  font-size: 1.5rem;
+}
+
+.footer div .contact-details a {
+  color: #1b1b1b;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.footer div .contact-details a:hover {
+  color: #e53935;
 }
 /*# sourceMappingURL=main.css.map */
