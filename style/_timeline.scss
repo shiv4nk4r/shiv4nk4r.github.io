@@ -66,12 +66,17 @@
 @media only screen and (max-width: 1000px) {
   .timeline {
     border: none;
-    max-width: 80%;
+    max-width: 100%;
+    margin: 0 auto;
   }
   .timeline .event:after {
     display: none;
   }
   .timeline .event:before {
     display: none;
+  }
+
+  #content {
+    flex: 1;
   }
 }
