@@ -12,7 +12,7 @@
 
   .logo {
     text-align: left;
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 500;
     color: #111;
     height: 400px;
@@ -53,5 +53,14 @@
   }
   100% {
     color: #1b1b1b;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .landing {
+    .logo {
+      font-size: 3rem;
+      width: 50%;
+      height: 30%;
+    }
   }
 }
