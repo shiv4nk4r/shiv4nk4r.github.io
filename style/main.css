@@ -395,10 +395,6 @@ html {
   background-color: #e53935;
 }
 
-.skill-content .col .card .skillbar .fil::after {
-  width: attr(data-fill);
-}
-
 @media only screen and (max-width: 1000px) {
   .skill-content {
     -webkit-box-pack: center;

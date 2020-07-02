@@ -26,9 +26,6 @@
           height: 100%;
           background-color: #e53935;
         }
-        .fil::after {
-          width: attr(data-fill);
-        }
       }
     }
   }
