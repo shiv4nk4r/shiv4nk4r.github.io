@@ -20,6 +20,13 @@ a:hover {
   color: #e53935;
 }
 
+@media only screen and (max-width: 1000px) {
+  html,
+  body {
+    font-size: 50%;
+  }
+}
+
 @import "landing";
 @import "maincontainer";
 @import "scrollbar";

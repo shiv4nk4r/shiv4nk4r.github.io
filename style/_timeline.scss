@@ -62,3 +62,15 @@
   content: "";
   top: 5px;
 }
+
+@media only screen and (max-width: 1000px) {
+  .timeline {
+    border: none;
+  }
+  .timeline .event:after {
+    display: none;
+  }
+  .timeline .event:before {
+    display: none;
+  }
+}

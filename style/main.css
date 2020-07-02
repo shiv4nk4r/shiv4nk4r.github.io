@@ -27,6 +27,13 @@ a:hover {
   color: #e53935;
 }
 
+@media only screen and (max-width: 1000px) {
+  html,
+  body {
+    font-size: 50%;
+  }
+}
+
 .landing {
   height: 100vh;
   width: 100%;
@@ -192,6 +199,15 @@ main .content-full:nth-child(odd) {
   background-color: #1b1b1b;
 }
 
+@media only screen and (max-width: 1000px) {
+  .project-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 /* width */
 body::-webkit-scrollbar {
   width: 7px;
@@ -289,6 +305,18 @@ html {
   top: 5px;
 }
 
+@media only screen and (max-width: 1000px) {
+  .timeline {
+    border: none;
+  }
+  .timeline .event:after {
+    display: none;
+  }
+  .timeline .event:before {
+    display: none;
+  }
+}
+
 .skill-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -348,6 +376,24 @@ html {
 
 .skill-content .col .card .skillbar .fil::after {
   width: attr(data-fill);
+}
+
+@media only screen and (max-width: 1000px) {
+  .skill-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .col {
+    width: 80%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 input[type="text"],
@@ -438,6 +484,12 @@ input[type="submit"]:hover {
   color: #e53935;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+}
+
+@media only screen and (max-width: 1000px) {
+  .nav-bar {
+    display: none;
+  }
 }
 
 .footer {
