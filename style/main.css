@@ -214,6 +214,12 @@ main .content-full:nth-child(odd) {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  main .content-full {
+    text-align: center;
+  }
+  main .content-full .title {
+    font-size: 7rem;
+  }
 }
 
 /* width */
@@ -388,19 +394,21 @@ html {
 
 @media only screen and (max-width: 1000px) {
   .skill-content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .col {
-    width: 80%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: left;
+  }
+  .skill-content .col {
+    text-align: left;
+    width: 100%;
   }
 }
 

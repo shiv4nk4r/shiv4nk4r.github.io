@@ -43,4 +43,12 @@ main {
   .project-content {
     flex-direction: column;
   }
+  main {
+    .content-full {
+      text-align: center;
+      .title {
+        font-size: 7rem;
+      }
+    }
+  }
 }

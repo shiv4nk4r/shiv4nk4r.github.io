@@ -36,11 +36,13 @@
 
 @media only screen and (max-width: 1000px) {
   .skill-content {
-    flex-direction: column;
-  }
-  .col {
-    width: 80%;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    text-align: left;
+    .col {
+      text-align: left;
+      width: 100%;
+    }
   }
 }
