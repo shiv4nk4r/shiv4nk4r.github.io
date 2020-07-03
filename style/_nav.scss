@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  overflow: hidden;
   .title {
     padding: 0px 20px;
     a {
@@ -40,8 +40,29 @@
   }
 }
 
+.nav-bar ul li a::before {
+  content: "";
+  position: absolute;
+  background: #1b1b1b;
+  padding: 50%;
+  border-radius: 50%;
+  left: calc(1% * var(--ripple-x));
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: transform 1s, opacity 1s;
+}
+
+.nav-bar ul li a:active::before {
+  transition: 0s;
+  opacity: 0.8;
+  transform: translate(-50%, -50%) scale(1);
+}
+
 @media only screen and (max-width: 1000px) {
   .nav-bar {
+    transition: 0s;
+    opacity: 1;
     display: none;
   }
 }

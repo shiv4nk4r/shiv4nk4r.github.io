@@ -470,6 +470,7 @@ input[type="submit"]:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 .nav-bar .title {
@@ -505,8 +506,36 @@ input[type="submit"]:hover {
   transition: 0.3s ease;
 }
 
+.nav-bar ul li a::before {
+  content: "";
+  position: absolute;
+  background: #1b1b1b;
+  padding: 50%;
+  border-radius: 50%;
+  left: calc(1% * var(--ripple-x));
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+.nav-bar ul li a:active::before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  opacity: 0.8;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
 @media only screen and (max-width: 1000px) {
   .nav-bar {
+    -webkit-transition: 0s;
+    transition: 0s;
+    opacity: 1;
     display: none;
   }
 }
