@@ -1,0 +1,52 @@
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1b1b1b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  .loader-box {
+    position: relative;
+    background-color: #fff;
+    border: 0.25rem solid #fff;
+    height: 10rem;
+    width: 10rem;
+    overflow: hidden;
+  }
+  .loader-box::before {
+    content: "S";
+    font-family: "Lobster", cursive;
+    color: #e53935;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    font-size: 5rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .loader-box::after {
+    content: "";
+    position: absolute;
+    background-color: #e53935;
+    height: 200%;
+    width: 200%;
+    bottom: -50%;
+    left: -50%;
+    border-radius: 45%;
+    animation: spin 4s ease-in-out infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-100%) rotate(500deg);
+  }
+}

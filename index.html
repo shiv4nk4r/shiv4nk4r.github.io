@@ -15,9 +15,15 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+
     <script src="https://use.fontawesome.com/f23290e26d.js"></script>
   </head>
   <body>
+    <div class="loader-wrapper"><div class="loader-box"></div></div>
     <div class="landing" id="shivankar">
       <div class="logo">Shivankar <br />Sharma</div>
     </div>
@@ -464,6 +470,12 @@
         root.style.setProperty("--ripple-x", x);
         root.style.setProperty("--ripple-y", y);
       });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      setTimeout(function () {
+        $(".loader-wrapper").fadeToggle();
+      }, 3500);
     </script>
   </body>
 </html>
