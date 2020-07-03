@@ -27,8 +27,13 @@ main {
       width: 80%;
       color: #fff;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
+      div {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+      }
     }
   }
   .content-full:nth-child(even) {
