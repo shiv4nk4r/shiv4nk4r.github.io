@@ -474,6 +474,9 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .skill-content .col .card .card-title strong {
@@ -618,6 +621,7 @@ input[type="submit"]:hover {
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
   background-color: #e53935;
+  border: 1px solid #e53935;
   padding: 10px 0px;
   border-radius: 20px;
 }
