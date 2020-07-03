@@ -1,9 +1,14 @@
+.nav-wrapper {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
 .nav-bar {
   width: 100%;
   margin: auto;
   min-height: 10vh;
-  position: sticky;
-  top: 0;
+  position: relative;
   background-color: rgba(255, 255, 255, 0.96);
   z-index: 100;
   display: flex;
@@ -62,25 +67,6 @@
       }
     }
   }
-}
-
-.nav-bar ul li a::before {
-  content: "";
-  position: absolute;
-  background: #1b1b1b;
-  padding: 50%;
-  border-radius: 50%;
-  left: calc(1% * var(--ripple-x));
-  top: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  opacity: 0;
-  transition: transform 1s, opacity 1s;
-}
-
-.nav-bar ul li a:active::before {
-  transition: 0s;
-  opacity: 0.5;
-  transform: translate(-50%, -50%) scale(1);
 }
 
 @media only screen and (max-width: 1000px) {

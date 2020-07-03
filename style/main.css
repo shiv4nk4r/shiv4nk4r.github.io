@@ -157,6 +157,87 @@ a:hover {
           box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
   -webkit-animation: font-color 4s infinite ease;
           animation: font-color 4s infinite ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.landing .logo::after {
+  content: "EXPLORE";
+  position: absolute;
+  bottom: 0;
+  padding: 20px 0px;
+  color: #e53935;
+  font-weight: 600;
+  font-size: 1.5rem;
+  -webkit-animation: move-up-down 2s ease-in-out infinite;
+          animation: move-up-down 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes move-up-down {
+  0% {
+    -webkit-transform: translate(0%, -5%);
+            transform: translate(0%, -5%);
+  }
+  50% {
+    -webkit-transform: translate(0%, 5%);
+            transform: translate(0%, 5%);
+  }
+  100% {
+    -webkit-transform: translate(0%, -5%);
+            transform: translate(0%, -5%);
+  }
+}
+
+@keyframes move-up-down {
+  0% {
+    -webkit-transform: translate(0%, -5%);
+            transform: translate(0%, -5%);
+  }
+  50% {
+    -webkit-transform: translate(0%, 5%);
+            transform: translate(0%, 5%);
+  }
+  100% {
+    -webkit-transform: translate(0%, -5%);
+            transform: translate(0%, -5%);
+  }
+}
+
+span {
+  position: absolute;
+  background: #121212;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  -webkit-animation: animate 1s linear infinite;
+          animation: animate 1s linear infinite;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    width: 0px;
+    opacity: 0.5;
+    height: 0px;
+  }
+  100% {
+    width: 1600px;
+    opacity: 0;
+    height: 1600px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    width: 0px;
+    opacity: 0.5;
+    height: 0px;
+  }
+  100% {
+    width: 1600px;
+    opacity: 0;
+    height: 1600px;
+  }
 }
 
 @-webkit-keyframes back-anim {
@@ -569,13 +650,19 @@ input[type="submit"]:hover {
   padding: 20px;
 }
 
+.nav-wrapper {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
 .nav-bar {
   width: 100%;
   margin: auto;
   min-height: 10vh;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+  position: relative;
   background-color: rgba(255, 255, 255, 0.96);
   z-index: 100;
   display: -webkit-box;
@@ -656,31 +743,6 @@ input[type="submit"]:hover {
 
 .nav-bar ul .hero-button:hover a {
   color: #e53935;
-}
-
-.nav-bar ul li a::before {
-  content: "";
-  position: absolute;
-  background: #1b1b1b;
-  padding: 50%;
-  border-radius: 50%;
-  left: calc(1% * var(--ripple-x));
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(0);
-          transform: translate(-50%, -50%) scale(0);
-  opacity: 0;
-  -webkit-transition: opacity 1s, -webkit-transform 1s;
-  transition: opacity 1s, -webkit-transform 1s;
-  transition: transform 1s, opacity 1s;
-  transition: transform 1s, opacity 1s, -webkit-transform 1s;
-}
-
-.nav-bar ul li a:active::before {
-  -webkit-transition: 0s;
-  transition: 0s;
-  opacity: 0.5;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
 }
 
 @media only screen and (max-width: 1000px) {

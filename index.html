@@ -25,33 +25,37 @@
   <body>
     <div class="loader-wrapper"><div class="loader-box"></div></div>
     <div class="landing" id="shivankar">
-      <div class="logo">Shivankar <br />Sharma</div>
+      <a href="#aboutme"
+        ><div class="logo">Shivankar <br />Sharma</div></a
+      >
     </div>
-    <div class="nav-bar">
-      <div class="title"><a href="#shivankar">Shivankar Sharma</a></div>
-      <ul>
-        <li>
-          <a href="#aboutme">About Me</a>
-        </li>
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-        <li>
-          <a href="#experience">Experience</a>
-        </li>
-        <li>
-          <a href="#awards">Awards</a>
-        </li>
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
-        <li>
-          <a href="#contact">Contact Me</a>
-        </li>
-        <li class="hero-button">
-          <a href="/ShivankarSharma.pdf" target="_blank">Download Resume</a>
-        </li>
-      </ul>
+    <div class="nav-wrapper">
+      <div class="nav-bar">
+        <div class="title"><a href="#shivankar">Shivankar Sharma</a></div>
+        <ul>
+          <li>
+            <a href="#aboutme">About Me</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#experience">Experience</a>
+          </li>
+          <li>
+            <a href="#awards">Awards</a>
+          </li>
+          <li>
+            <a href="#skills">Skills</a>
+          </li>
+          <li>
+            <a href="#contact">Contact Me</a>
+          </li>
+          <li class="hero-button">
+            <a href="/ShivankarSharma.pdf" target="_blank">Download Resume</a>
+          </li>
+        </ul>
+      </div>
     </div>
     <main>
       <div class="content-full">
@@ -498,26 +502,41 @@
       </div>
     </div>
     <script>
-      var root = document.documentElement;
-      document.addEventListener("mousedown", (ev) => {
-        var el = ev.target,
-          top = 0,
-          left = 0;
-        do {
-          top += el.offsetTop;
-          left += el.offsetLeft;
-        } while ((el = el.offsetParent));
-        var x = (ev.clientX - left) / ev.target.offsetWidth;
-        var y = (ev.clientY - top) / ev.target.offsetHeight;
-        root.style.setProperty("--ripple-x", x);
-        root.style.setProperty("--ripple-y", y);
+      const navBar = document.getElementsByClassName("nav-bar");
+      navBar[0].addEventListener("click", function (e) {
+        console.log("Clicked");
+        let x = e.clientX - e.target.offsetLeft;
+        let y = e.clientY - e.target.offsetTop;
+
+        let ripples = document.createElement("span");
+        ripples.style.left = x + "px";
+        ripples.style.top = y + "px";
+        this.append(ripples);
+        setTimeout(() => {
+          ripples.remove();
+        }, 1000);
       });
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       setTimeout(function () {
         $(".loader-wrapper").fadeToggle();
-      }, 3500);
+      }, 500);
+    </script>
+    <script>
+      const logoButton = document.getElementsByClassName("logo");
+      logoButton[0].addEventListener("click", function (e) {
+        let x = e.clientX - e.target.offsetLeft;
+        let y = e.clientY - e.target.offsetTop;
+
+        let ripples = document.createElement("span");
+        ripples.style.left = x + "px";
+        ripples.style.top = y + "px";
+        this.append(ripples);
+        setTimeout(() => {
+          ripples.remove();
+        }, 1000);
+      });
     </script>
   </body>
 </html>
