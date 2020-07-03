@@ -25,6 +25,22 @@
           color: #e53935;
         }
       }
+      .hero-button {
+        margin: 5px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e53935;
+        padding: 5px 0px;
+        border-radius: 20px;
+        color: #fff;
+      }
+      .hero-button:hover {
+        background-color: #ffff;
+        transition: 0.3s all ease;
+        border: 1px solid #e53935;
+        color: #e53935;
+      }
     }
     .contact-links {
       ul {

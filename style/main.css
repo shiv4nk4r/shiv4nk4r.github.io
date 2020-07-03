@@ -438,15 +438,18 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .skill-content .col .card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -455,19 +458,34 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.skill-content .col .card .title {
+.skill-content .col .card .card-title {
+  padding: 4rem 0rem;
+  padding-bottom: 3rem;
   font-size: 2rem;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.skill-content .col .card .card-title strong {
+  color: #e53935;
+  font-size: 3rem;
+  font-weight: 300;
 }
 
 .skill-content .col .card .skillbar {
   width: 100%;
   height: 7px;
+  margin-bottom: 2rem;
   background-color: #fff;
 }
 
@@ -493,6 +511,9 @@ html {
   .skill-content .col {
     text-align: left;
     width: 100%;
+  }
+  .skill-content .col .card {
+    max-height: 200px;
   }
 }
 
@@ -571,6 +592,12 @@ input[type="submit"]:hover {
   display: flex;
   list-style: none;
   text-decoration: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav-bar ul li a {
@@ -585,6 +612,34 @@ input[type="submit"]:hover {
   color: #e53935;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+}
+
+.nav-bar ul .hero-button {
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  background-color: #e53935;
+  padding: 10px 0px;
+  border-radius: 20px;
+}
+
+.nav-bar ul .hero-button a {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.nav-bar ul .hero-button a:hover {
+  color: #fff;
+}
+
+.nav-bar ul .hero-button:hover {
+  background-color: #ffff;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  border: 1px solid #e53935;
+}
+
+.nav-bar ul .hero-button:hover a {
+  color: #e53935;
 }
 
 .nav-bar ul li a::before {
@@ -667,6 +722,31 @@ input[type="submit"]:hover {
 }
 
 .footer div .contact-details a:hover {
+  color: #e53935;
+}
+
+.footer div .contact-details .hero-button {
+  margin: 5px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e53935;
+  padding: 5px 0px;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.footer div .contact-details .hero-button:hover {
+  background-color: #ffff;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  border: 1px solid #e53935;
   color: #e53935;
 }
 

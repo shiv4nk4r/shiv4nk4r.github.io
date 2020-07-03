@@ -24,6 +24,8 @@
     display: flex;
     list-style: none;
     text-decoration: none;
+    justify-content: center;
+    align-items: center;
 
     li {
       a {
@@ -35,6 +37,27 @@
       a:hover {
         color: #e53935;
         transition: 0.3s ease;
+      }
+    }
+    .hero-button {
+      transition: 0.3s all ease;
+      background-color: #e53935;
+      padding: 10px 0px;
+      border-radius: 20px;
+      a {
+        font-size: 1.5rem;
+        color: #fff;
+      }
+      a:hover {
+        color: #fff;
+      }
+    }
+    .hero-button:hover {
+      background-color: #ffff;
+      transition: 0.3s all ease;
+      border: 1px solid #e53935;
+      a {
+        color: #e53935;
       }
     }
   }
