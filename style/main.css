@@ -468,6 +468,10 @@ html {
   position: relative;
 }
 
+.timeline .event p {
+  padding: 20px 0px;
+}
+
 .timeline .event:last-of-type {
   padding-bottom: 0;
   margin-bottom: 0;

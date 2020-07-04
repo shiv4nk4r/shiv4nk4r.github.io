@@ -31,6 +31,9 @@
   padding-bottom: 25px;
   margin-bottom: 50px;
   position: relative;
+  p {
+    padding: 20px 0px;
+  }
 }
 .timeline .event:last-of-type {
   padding-bottom: 0;
