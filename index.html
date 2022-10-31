@@ -477,6 +477,14 @@
         $(".loader-wrapper").fadeToggle();
       }, 3000);
     </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        //window.addEventListener('load',function(){...}); (for Netscape) and window.attachEvent('onload',function(){...}); (for IE and Opera) also work
+        alert(
+          "Working on a new version will be live soon. Please refer to my resume...."
+        );
+      };
+    </script>
     <script>
       const logoButton = document.getElementsByClassName("logo");
       logoButton[0].addEventListener("click", function (e) {
