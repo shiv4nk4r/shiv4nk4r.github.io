@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = [...(await getCollection('writing'))].sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+);
+---
+
+<BaseLayout title="Writing" description="Notes on systems, research, and building." path="/writing">
+  <div class="wrap">
+    <h1 class="display">Writing</h1>
+    {
+      posts.length === 0 ? (
+        <p>No posts yet.</p>
+      ) : (
+        <ol class="work-list">
+          {posts.map((post) => (
+            <li>
+              <a href={`/writing/${post.id}`}>
+                <span class="work-title">{post.data.title}</span>
+                <span class="year">{post.data.date.getUTCFullYear()}</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      )
+    }
+  </div>
+</BaseLayout>

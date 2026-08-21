@@ -1,0 +1,24 @@
+---
+import { render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  entry: CollectionEntry<'writing'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<article>
+  <header class="identity-band">
+    <div class="wrap">
+      <p class="label">{entry.data.date.toISOString().slice(0, 10)}</p>
+      <h1 class="display">{entry.data.title}</h1>
+      <p>{entry.data.summary}</p>
+    </div>
+  </header>
+  <div class="wrap prose">
+    <Content />
+  </div>
+</article>

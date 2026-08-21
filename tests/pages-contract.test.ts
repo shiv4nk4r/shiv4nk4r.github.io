@@ -24,4 +24,10 @@ describe('page contracts', () => {
     expect(src).toContain('render');
     expect(src).toContain('entry.data.org');
   });
+
+  it('writing index lists posts from the writing collection', () => {
+    const src = readFileSync('src/pages/writing/index.astro', 'utf8');
+    expect(src).toContain("getCollection('writing')");
+    expect(src).toContain('No posts yet.');
+  });
 });
