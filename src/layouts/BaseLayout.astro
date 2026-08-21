@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
 import { canonicalUrl, SITE_NAME } from '../lib/site';
 
 interface Props {
@@ -34,10 +36,10 @@ const pageTitle = title === SITE_NAME ? SITE_NAME : `${title} · ${SITE_NAME}`;
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
-    <slot name="header" />
+    <SiteHeader />
     <main id="content">
       <slot />
     </main>
-    <slot name="footer" />
+    <SiteFooter />
   </body>
 </html>

@@ -1,0 +1,36 @@
+---
+import { LINKS, NAV, SITE_NAME } from '../lib/site';
+---
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="/">{SITE_NAME}</a>
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      data-menu-toggle
+    >
+      Menu
+    </button>
+    <nav id="site-nav" class="site-nav" data-nav>
+      {
+        NAV.map((item) => (
+          <a href={item.href}>{item.label}</a>
+        ))
+      }
+      <a class="resume" href={LINKS.resume} target="_blank" rel="noreferrer">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector('[data-menu-toggle]');
+  const nav = document.querySelector('[data-nav]');
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    nav?.classList.toggle('is-open', !open);
+  });
+</script>

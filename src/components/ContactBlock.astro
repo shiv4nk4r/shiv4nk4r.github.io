@@ -1,0 +1,18 @@
+---
+import { EMAIL, LINKS, PHONE } from '../lib/site';
+---
+
+<div class="contact-block">
+  <p>Email is the most reliable way to reach me.</p>
+  <p><a href={`mailto:${EMAIL}`}>{EMAIL}</a></p>
+  <p>
+    <a href={LINKS.linkedin} rel="noreferrer" target="_blank">LinkedIn</a>
+    ·
+    <a href={LINKS.github} rel="noreferrer" target="_blank">GitHub</a>
+    ·
+    <a href={LINKS.behance} rel="noreferrer" target="_blank">Behance</a>
+    ·
+    <a href={LINKS.resume} target="_blank" rel="noreferrer">Resume</a>
+  </p>
+  <p class="phone"><a href={`tel:${PHONE}`}>{PHONE}</a></p>
+</div>
