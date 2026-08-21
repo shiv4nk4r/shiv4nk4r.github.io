@@ -36,6 +36,7 @@ import { WORK_FILTERS } from '../lib/work';
       const category = row.getAttribute('data-category');
       const show = filter === 'all' || category === filter;
       (row as HTMLElement).hidden = !show;
+      row.classList.toggle('is-first-visible', show && visible === 0);
       if (show) visible += 1;
     });
 

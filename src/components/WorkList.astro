@@ -16,7 +16,7 @@ const entrySlug = (id: string) => id.replace(/\.md$/, '').split('/').at(-1) ?? i
       const year = entry.data.date.getUTCFullYear();
       const n = String(index + 1).padStart(2, '0');
       return (
-        <li data-category={entry.data.category}>
+        <li class:list={[index === 0 && 'is-first-visible']} data-category={entry.data.category}>
           <a href={`/work/${entrySlug(entry.id)}`}>
             <span class="work-title">{entry.data.title}</span>
             <span class:list={['year', numbered && index === 0 && 'year-mint']}>

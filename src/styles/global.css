@@ -4,7 +4,7 @@
   --muted: color-mix(in srgb, var(--ink) 45%, transparent);
   --hairline: #e4e4e0;
   --band: #111213;
-  --mint: #0d9f6e;
+  --mint: #0a7f58;
   --mint-on-black: #5ee9b6;
   --max: 72rem;
   --font-display: 'Syne', sans-serif;
@@ -98,6 +98,16 @@ h2,
 
 .rise {
   animation: rise 0.5s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .rise {
+    animation: none;
+  }
 }
 
 .site-header {
@@ -214,7 +224,7 @@ h2,
   border-top: 1px solid var(--hairline);
 }
 
-.work-list li:first-child a {
+.work-list li.is-first-visible a {
   border-top: 2px solid var(--ink);
 }
 

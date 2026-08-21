@@ -16,5 +16,14 @@ describe('chrome', () => {
     expect(emailAt).toBeGreaterThan(-1);
     expect(phoneAt).toBeGreaterThan(emailAt);
     expect(src.toLowerCase()).not.toMatch(/seeking|for hire/);
+    expect(src.match(/\{' · '\}/g)).toHaveLength(3);
+    expect(src).toContain('href="tel:+919891949387"');
+    expect(src).toContain('>{PHONE}</a>');
+  });
+
+  it('uses an AA mint token on the light page', () => {
+    const css = readFileSync('src/styles/global.css', 'utf8');
+    expect(css).toContain('--mint: #0a7f58;');
+    expect(css).toContain('--mint-on-black: #5ee9b6;');
   });
 });
