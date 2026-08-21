@@ -8,7 +8,7 @@ summary: A lightweight real-time ASCII capture of a camera feed.
 tech: [JavaScript]
 links:
   - label: Live
-    href: https://shivankar.net/ASCII-Camera/
+    href: https://shiv4nk4r.github.io/ASCII-Camera/
 ---
 
 ## Problem

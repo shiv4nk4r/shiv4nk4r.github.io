@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 
 describe('cutover', () => {
@@ -10,8 +10,8 @@ describe('cutover', () => {
     expect(existsSync('public/ShivankarSharma.pdf')).toBe(true);
   });
 
-  it('ships the custom domain', () => {
-    expect(readFileSync('public/CNAME', 'utf8').trim()).toBe('shivankar.net');
+  it('does not ship a custom-domain CNAME', () => {
+    expect(existsSync('public/CNAME')).toBe(false);
   });
 
   it('does not publish SystemDesign.pdf in public/', () => {

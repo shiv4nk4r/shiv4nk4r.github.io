@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://shivankar.net';
+export const SITE_URL = 'https://shiv4nk4r.github.io';
 export const SITE_NAME = 'Shivankar Sharma';
 export const HEADLINE = 'Engineer and researcher.';
 export const INTRO =
