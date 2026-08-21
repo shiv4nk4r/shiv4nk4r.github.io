@@ -1,0 +1,119 @@
+{
+  "experience": [
+    {
+      "title": "GreyOrange · Operations Research Scientist",
+      "period": "2025–2026",
+      "detail": "R&D for warehouse robotics: operator assignment (VRP) and multi-pallet palletization.",
+      "href": "/work/operator-assignment"
+    },
+    {
+      "title": "GreyOrange · SDE 2",
+      "period": "2024–2026",
+      "detail": "Manager dashboard and backend systems in Node.js, Erlang, and Spring Boot.",
+      "href": "/work/quadtree-dashboard"
+    },
+    {
+      "title": "GreyOrange · Software Developer",
+      "period": "2022–2024",
+      "detail": "Scalable backends and a hardware integration service for fulfillment systems."
+    },
+    {
+      "title": "Visit Health · Full-stack Developer",
+      "period": "2022",
+      "detail": "Pharmacy e-commerce in Node.js, SQL, and React.",
+      "href": "/work/visit-health-pharmacy"
+    },
+    {
+      "title": "Freelance · Full-stack Developer",
+      "period": "2020–2022",
+      "detail": "Product work including a sports pick’em league and commerce PWAs.",
+      "href": "/work/pickem-tournament"
+    },
+    {
+      "title": "MPN Technologies · Full-stack Developer",
+      "period": "2018",
+      "detail": "Website and server for a short product engagement."
+    },
+    {
+      "title": "Vikalp · Game Developer Lead",
+      "period": "2018",
+      "detail": "Led an educational Android game and in-house animation tooling."
+    },
+    {
+      "title": "INK, IIIT Delhi · Member",
+      "period": "2018–2021",
+      "detail": "Student technical community at IIITD."
+    },
+    {
+      "title": "Esya · Event organiser / volunteer",
+      "period": "2017–2018",
+      "detail": "Design hackathon at IIIT Delhi."
+    },
+    {
+      "title": "SYNC, New Era Public School · Design Head / Computer Prefect",
+      "period": "2015–2017",
+      "detail": "Student council; graphic, web, and motion work for the school tech team."
+    }
+  ],
+  "education": [
+    {
+      "title": "B.Tech, Computer Science and Design",
+      "period": "2017–2021",
+      "detail": "Indraprastha Institute of Information Technology, Delhi (IIITD). Double major."
+    },
+    {
+      "title": "Class XII, Computer Science",
+      "period": "2016–2017",
+      "detail": "New Era Public School, Mayapuri. CBSE."
+    },
+    {
+      "title": "Class X",
+      "period": "2014–2015",
+      "detail": "New Era Public School, Mayapuri. CBSE."
+    }
+  ],
+  "awards": [
+    {
+      "title": "Geek with Guts",
+      "period": "2024",
+      "detail": "GreyOrange. Technical architecture, mentoring, and product impact."
+    },
+    {
+      "title": "ZooHackathon 2018",
+      "period": "2018",
+      "detail": "1st Asia-Pacific, 2nd world. WWF, TRAFFIC, and the U.S. government.",
+      "href": "/work/claw-net"
+    },
+    {
+      "title": "ZooHackathon 2017",
+      "period": "2017",
+      "detail": "Runner-up, Asia-Pacific. Poacher detection with on-site cameras.",
+      "href": "/work/poacher-detection"
+    },
+    {
+      "title": "Design Hackathon, Amity University",
+      "period": "2019",
+      "detail": "First place. Safety-focused app concept."
+    },
+    {
+      "title": "Dean’s List",
+      "period": "2019",
+      "detail": "IIIT Delhi."
+    },
+    {
+      "title": "Code the Web, Exun",
+      "period": "2016",
+      "detail": "First prize, web design, Delhi Public School tech fest."
+    },
+    {
+      "title": "Best video editor, TAFS Technogeeks",
+      "period": "2016",
+      "detail": "The Air Force School tech fest."
+    },
+    {
+      "title": "Excellence in computers / four-year scholar",
+      "period": "2016",
+      "detail": "New Era Public School."
+    }
+  ]
+}
