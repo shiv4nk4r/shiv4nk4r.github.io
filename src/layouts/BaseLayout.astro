@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { SITE_NAME, SITE_URL } from '../lib/site';
+import { canonicalUrl, SITE_NAME } from '../lib/site';
 
 interface Props {
   title: string;
@@ -9,7 +9,7 @@ interface Props {
 }
 
 const { title, description, path = '/' } = Astro.props;
-const canonical = new URL(path, SITE_URL).toString();
+const canonical = canonicalUrl(path);
 const pageTitle = title === SITE_NAME ? SITE_NAME : `${title} · ${SITE_NAME}`;
 ---
 

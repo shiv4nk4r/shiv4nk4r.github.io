@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
+  canonicalUrl,
   EMAIL,
   HEADLINE,
   LINKS,
@@ -14,6 +15,11 @@ describe('site constants', () => {
   it('uses the canonical domain', () => {
     expect(SITE_URL).toBe('https://shivankar.net');
     expect(SITE_NAME).toBe('Shivankar Sharma');
+  });
+
+  it('omits the trailing slash only for the homepage canonical URL', () => {
+    expect(canonicalUrl('/')).toBe('https://shivankar.net');
+    expect(canonicalUrl('/work')).toBe('https://shivankar.net/work');
   });
 
   it('keeps dual-use identity copy', () => {

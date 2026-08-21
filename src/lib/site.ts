@@ -4,6 +4,9 @@ export const HEADLINE = 'Engineer and researcher.';
 export const INTRO =
   'Full-stack systems and operations research for warehouse robotics. CS + Design, IIITD.';
 
+export const canonicalUrl = (path: string) =>
+  path === '/' ? SITE_URL : new URL(path, SITE_URL).toString();
+
 export const SKILLS = [
   'Node.js',
   'Erlang',
