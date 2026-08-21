@@ -1,0 +1,36 @@
+---
+import { render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  entry: CollectionEntry<'work'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const year = entry.data.date.getUTCFullYear();
+---
+
+<article>
+  <header class="identity-band">
+    <div class="wrap">
+      <p class="label">{entry.data.category} · {entry.data.org} · {year}</p>
+      <h1 class="display">{entry.data.title}</h1>
+      <p>{entry.data.summary}</p>
+    </div>
+  </header>
+  <div class="wrap prose">
+    <Content />
+    {
+      entry.data.links.length > 0 && (
+        <p class="links">
+          {entry.data.links.map((link) => (
+            <a href={link.href} rel="noreferrer" target="_blank">
+              {link.label}
+            </a>
+          ))}
+        </p>
+      )
+    }
+  </div>
+</article>

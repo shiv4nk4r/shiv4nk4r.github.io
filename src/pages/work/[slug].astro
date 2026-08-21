@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyLayout from '../../components/CaseStudyLayout.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('work');
+  return entries.map((entry) => {
+    const slug = entry.id.replace(/\.md$/, '').split('/').at(-1) ?? entry.id;
+    return {
+      params: { slug },
+      props: { entry, slug },
+    };
+  });
+}
+
+const { entry, slug } = Astro.props;
+---
+
+<BaseLayout title={entry.data.title} description={entry.data.summary} path={`/work/${slug}`}>
+  <CaseStudyLayout entry={entry} />
+</BaseLayout>

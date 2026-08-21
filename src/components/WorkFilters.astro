@@ -1,0 +1,53 @@
+---
+import { WORK_FILTERS } from '../lib/work';
+---
+
+<div class="filters" data-filters>
+  {
+    WORK_FILTERS.map((filter, i) => (
+      <button
+        type="button"
+        data-filter={filter.id}
+        aria-pressed={i === 0 ? 'true' : 'false'}
+      >
+        {filter.label}
+      </button>
+    ))
+  }
+</div>
+
+<p class="filter-empty" data-empty hidden>
+  No work in this category. <button type="button" data-reset>All</button>
+</p>
+
+<script>
+  function apply(filter: string) {
+    const buttons = document.querySelectorAll('[data-filter]');
+    buttons.forEach((button) => {
+      button.setAttribute(
+        'aria-pressed',
+        String(button.getAttribute('data-filter') === filter),
+      );
+    });
+
+    const rows = document.querySelectorAll('[data-work-list] li');
+    let visible = 0;
+    rows.forEach((row) => {
+      const category = row.getAttribute('data-category');
+      const show = filter === 'all' || category === filter;
+      (row as HTMLElement).hidden = !show;
+      if (show) visible += 1;
+    });
+
+    const empty = document.querySelector('[data-empty]');
+    if (empty) (empty as HTMLElement).hidden = visible !== 0;
+  }
+
+  document.querySelector('[data-filters]')?.addEventListener('click', (event) => {
+    const target = event.target as HTMLElement;
+    const filter = target.getAttribute('data-filter');
+    if (filter) apply(filter);
+  });
+
+  document.querySelector('[data-reset]')?.addEventListener('click', () => apply('all'));
+</script>

@@ -1,0 +1,37 @@
+---
+import archive from '../content/archive.json';
+
+interface Item {
+  title: string;
+  detail: string;
+  period?: string;
+  href?: string;
+}
+
+const columns: { heading: string; items: Item[] }[] = [
+  { heading: 'Experience', items: archive.experience },
+  { heading: 'Education', items: archive.education },
+  { heading: 'Awards', items: archive.awards },
+];
+---
+
+<section class="archive wrap">
+  {
+    columns.map((column) => (
+      <div>
+        <h2>{column.heading}</h2>
+        <ul>
+          {column.items.map((item) => (
+            <li>
+              <p>
+                {item.href ? <a href={item.href}>{item.title}</a> : <strong>{item.title}</strong>}
+                {item.period && <span class="year"> {item.period}</span>}
+              </p>
+              <p>{item.detail}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))
+  }
+</section>

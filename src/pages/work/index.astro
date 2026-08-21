@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import WorkFilters from '../../components/WorkFilters.astro';
+import WorkList from '../../components/WorkList.astro';
+import { sortByDateDesc } from '../../lib/work';
+
+const entries = sortByDateDesc(await getCollection('work'));
+---
+
+<BaseLayout title="Work" description="Selected and archived work." path="/work">
+  <div class="wrap work-index">
+    <h1 class="display">Work</h1>
+    <WorkFilters />
+    <WorkList entries={entries} />
+  </div>
+</BaseLayout>

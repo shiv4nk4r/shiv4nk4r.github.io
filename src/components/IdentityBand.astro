@@ -1,0 +1,14 @@
+---
+import { HEADLINE, INTRO, LINKS, SKILLS } from '../lib/site';
+---
+
+<header class="identity-band">
+  <div class="wrap rise">
+    <h1 class="display">{HEADLINE}</h1>
+    <p>{INTRO}</p>
+    <p class="skills mono">{SKILLS.join(' · ')}</p>
+    <p>
+      <a class="resume" href={LINKS.resume} target="_blank" rel="noreferrer">Resume</a>
+    </p>
+  </div>
+</header>

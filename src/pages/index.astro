@@ -1,8 +1,20 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { HEADLINE, INTRO, SITE_NAME } from '../lib/site';
+import ArchiveColumns from '../components/ArchiveColumns.astro';
+import IdentityBand from '../components/IdentityBand.astro';
+import WorkList from '../components/WorkList.astro';
+import { INTRO, SITE_NAME } from '../lib/site';
+import { featuredEntries } from '../lib/work';
+
+const featured = featuredEntries(await getCollection('work'));
 ---
 
-<BaseLayout title={SITE_NAME} description={INTRO}>
-  <h1 class="display wrap">{HEADLINE}</h1>
+<BaseLayout title={SITE_NAME} description={INTRO} path="/">
+  <IdentityBand />
+  <div class="wrap rise featured-work" style="animation-delay: 0.08s">
+    <h2 class="label">Selected work</h2>
+    <WorkList entries={featured} numbered />
+  </div>
+  <ArchiveColumns />
 </BaseLayout>

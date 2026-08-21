@@ -164,7 +164,146 @@ h2,
   gap: 1rem;
 }
 
+.identity-band {
+  background: var(--band);
+  color: var(--page);
+  padding: 3.5rem 0 3rem;
+}
+
+.identity-band .display {
+  max-width: 14ch;
+  margin: 0 0 1rem;
+  font-size: clamp(2.8rem, 8vw, 6.5rem);
+}
+
+.identity-band .label,
+.identity-band .skills {
+  color: var(--mint-on-black);
+  font-family: var(--font-mono);
+}
+
+.identity-band a.resume {
+  color: var(--mint-on-black);
+}
+
+.featured-work,
+.work-index {
+  padding-top: 3rem;
+}
+
+.featured-work .label {
+  margin: 0 0 1rem;
+}
+
+.work-index {
+  padding-bottom: 4rem;
+}
+
+.work-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.work-list li a {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  text-decoration: none;
+  border-top: 1px solid var(--hairline);
+}
+
+.work-list li:first-child a {
+  border-top: 2px solid var(--ink);
+}
+
+.work-list.is-numbered .year,
+.work-list li:first-child .year-mint {
+  color: var(--mint);
+}
+
+.work-list a:hover .year {
+  color: var(--mint);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.filters button,
+.filter-empty button {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.filters button[aria-pressed='true'],
+.filter-empty button {
+  color: var(--mint);
+  box-shadow: 0 1px 0 var(--mint);
+}
+
+.archive {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 3rem 0 4rem;
+  font-size: 0.92rem;
+}
+
+.archive h2 {
+  font-size: 1.15rem;
+}
+
+.archive ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.archive li + li {
+  margin-top: 1rem;
+}
+
+.archive p {
+  margin: 0.25rem 0;
+}
+
+.archive .year {
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.prose {
+  padding: 2.5rem 0 4rem;
+  max-width: 42rem;
+}
+
+.prose h2 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin-top: 2rem;
+}
+
+.prose .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
 @media (max-width: 800px) {
+  .archive {
+    grid-template-columns: 1fr;
+  }
+
   .menu-toggle {
     display: inline-flex;
   }
