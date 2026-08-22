@@ -6,6 +6,7 @@ import {
   LINKS,
   NAV,
   PHONE,
+  PHONE_TEL,
   SITE_NAME,
   SITE_URL,
   SKILLS,
@@ -30,6 +31,8 @@ describe('site constants', () => {
   it('exposes nav in spec order', () => {
     expect(NAV).toEqual([
       { href: '/work', label: 'Work' },
+      { href: '/#experience', label: 'Experience' },
+      { href: '/#education', label: 'Education' },
       { href: '/writing', label: 'Writing' },
       { href: '/contact', label: 'Contact' },
     ]);
@@ -48,8 +51,9 @@ describe('site constants', () => {
   });
 
   it('exposes contact and resume links', () => {
-    expect(EMAIL).toBe('shivankar1234@gmail.com');
-    expect(PHONE).toBe('9891949387');
+    expect(EMAIL).toBe('devwithshiv@gmail.com');
+    expect(PHONE).toBe('+44 7352 697394');
+    expect(PHONE_TEL).toBe('+447352697394');
     expect(LINKS).toEqual({
       linkedin: 'https://www.linkedin.com/in/shiv4nk4r',
       github: 'https://github.com/shiv4nk4r',

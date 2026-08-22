@@ -17,8 +17,25 @@ describe('chrome', () => {
     expect(phoneAt).toBeGreaterThan(emailAt);
     expect(src.toLowerCase()).not.toMatch(/seeking|for hire/);
     expect(src.match(/\{' · '\}/g)).toHaveLength(3);
-    expect(src).toContain('href="tel:+919891949387"');
+    expect(src).toContain('href={`tel:${PHONE_TEL}`}');
     expect(src).toContain('>{PHONE}</a>');
+  });
+
+  it('embeds the Steam widget for Cricket Manager 27', () => {
+    const src = readFileSync('src/components/GamesBand.astro', 'utf8');
+    expect(src).toContain('store.steampowered.com/widget/5072330');
+    expect(src).toContain('Cricket Manager 27');
+    expect(src).toContain('Shushi Studios');
+  });
+
+  it('resets the GreyOrange role grid on small screens', () => {
+    const css = readFileSync('src/styles/global.css', 'utf8');
+    const mobile = css.slice(css.indexOf('@media (max-width: 720px)'));
+    expect(mobile).toContain('.archive .org:has(.org-logo) .roles .entry');
+    expect(mobile).toContain('grid-template-columns: minmax(0, 1fr) auto');
+    expect(mobile).not.toMatch(
+      /\.roles \.entry \{[^}]*grid-template-columns: 2\.6rem minmax\(0, 1fr\) 14\.5rem/,
+    );
   });
 
   it('uses an AA mint token on the light page', () => {

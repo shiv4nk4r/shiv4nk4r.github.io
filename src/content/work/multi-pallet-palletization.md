@@ -4,25 +4,26 @@ date: 2025-09-01
 org: GreyOrange
 category: research
 featured: true
-summary: A two-phase heuristic plus Adaptive Large Neighborhood Search for 3D multi-pallet bin packing at warehouse scale.
-tech: [Python, heuristics, ALNS]
-links:
-  - label: GitHub
-    href: https://github.com/shiv4nk4r/multi-pallet-palletizer
+summary: A two-phase iterative heuristic for palletization in robotics-integrated warehousing.
+tech: [Python, heuristics]
+tags: [ALNS, OR]
+links: []
 ---
 
 ## Problem
 
-Multi-pallet 3D packing is a bin-packing problem that standard constraint solvers did not finish on large, real fulfillment datasets.
+Palletization sets throughput in a robotics-integrated warehouse. A weak packing hits cartons-per-hour, robot travel, operator idle time, and how well robots and people stay coordinated during pick and load. Constraint-based 3D bin packing and Adaptive Large Neighborhood Search could state the problem, but they did not scale under heterogeneous item sizes, routing-dependent pickups, and stability while the pallet is still being built.
 
 ## Approach
 
-I designed a two-phase strategy: a fast constructive heuristic for a feasible packing, then Adaptive Large Neighborhood Search to refine it. The work included benchmarking heuristics, constraint solvers, and metaheuristics on internal data.
+Phase 1 groups items into pallets with warehouse factors: pickup proximity, volume and weight balance, stacking compatibility, fewer robot trips, less operator wait. Phase 2 checks each pallet with a coordinate assignment solver for geometry and stacking stability. Fill ratio is walked between 70% and 80% until the packing is feasible and usable.
+
+Further method, data, and production detail are confidential and bound by a company contract.
 
 ## Outcome
 
-The pipeline produced usable packings on dataset sizes where a straight constraint model stalled. Research and code live in the public palletizer repo.
+The pipeline stayed under 10 seconds for 700+ items and improved volume use and robot travel relative to the formulations that did not scale. I cannot say more here.
 
 ## Tech
 
-Python, custom heuristics, and ALNS. See the GitHub repository for the solver layout.
+Python and the two-phase heuristic. The rest is under contract.

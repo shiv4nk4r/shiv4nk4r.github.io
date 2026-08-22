@@ -28,9 +28,18 @@ import { LINKS, NAV, SITE_NAME } from '../lib/site';
 <script>
   const toggle = document.querySelector('[data-menu-toggle]');
   const nav = document.querySelector('[data-nav]');
+  const closeMenu = () => {
+    toggle?.setAttribute('aria-expanded', 'false');
+    nav?.classList.remove('is-open');
+  };
+
   toggle?.addEventListener('click', () => {
     const open = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', String(!open));
     nav?.classList.toggle('is-open', !open);
+  });
+
+  nav?.querySelectorAll('a[href*="#"]').forEach((link) => {
+    link.addEventListener('click', closeMenu);
   });
 </script>

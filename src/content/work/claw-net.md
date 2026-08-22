@@ -3,7 +3,7 @@ title: ClawNet
 date: 2018-11-01
 org: ZooHackathon / WWF
 category: college
-featured: true
+featured: false
 summary: A crawler and map that traced coded wildlife-trade language across the web.
 tech: [Node.js, Angular, MongoDB, Python]
 links:

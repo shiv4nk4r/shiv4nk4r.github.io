@@ -1,5 +1,5 @@
 ---
-import { EMAIL, LINKS, PHONE } from '../lib/site';
+import { EMAIL, LINKS, PHONE, PHONE_TEL } from '../lib/site';
 ---
 
 <div class="contact-block">
@@ -16,5 +16,5 @@ import { EMAIL, LINKS, PHONE } from '../lib/site';
       rel="noreferrer">Resume</a
     >
   </p>
-  <p class="phone"><a href="tel:+919891949387">{PHONE}</a></p>
+  <p class="phone"><a href={`tel:${PHONE_TEL}`}>{PHONE}</a></p>
 </div>

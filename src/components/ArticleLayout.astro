@@ -1,6 +1,7 @@
 ---
 import { render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
+import MermaidInit from './MermaidInit.astro';
 
 interface Props {
   entry: CollectionEntry<'writing'>;
@@ -22,3 +23,5 @@ const { Content } = await render(entry);
     <Content />
   </div>
 </article>
+
+<MermaidInit />

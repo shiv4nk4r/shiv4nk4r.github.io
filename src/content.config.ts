@@ -11,8 +11,9 @@ const work = defineCollection({
     featured: z.boolean().default(false),
     summary: z.string(),
     tech: z.array(z.string()),
+    tags: z.array(z.string()).default([]),
     links: z
-      .array(z.object({ label: z.string(), href: z.string().url() }))
+      .array(z.object({ label: z.string(), href: z.string() }))
       .default([]),
   }),
 });

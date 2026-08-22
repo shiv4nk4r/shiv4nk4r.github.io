@@ -2,13 +2,22 @@ export type WorkCategory = 'industry' | 'research' | 'personal' | 'college';
 export type WorkFilter = WorkCategory | 'all';
 
 export const FEATURED_SLUGS = [
+  'pm-orchestrator',
   'operator-assignment',
   'multi-pallet-palletization',
   'quadtree-dashboard',
   'korao',
   'visit-health-pharmacy',
-  'claw-net',
 ] as const;
+
+export const WORK_TAGS: Record<string, string[]> = {
+  'pm-orchestrator': ['AI workflows', 'MCP'],
+  'operator-assignment': ['MILP'],
+  'multi-pallet-palletization': ['ALNS', 'OR'],
+  'quadtree-dashboard': ['QuadTree'],
+  korao: ['Tauri'],
+  'visit-health-pharmacy': ['Node.js', 'React'],
+};
 
 export const WORK_FILTERS: readonly { id: WorkFilter; label: string }[] = [
   { id: 'all', label: 'All' },

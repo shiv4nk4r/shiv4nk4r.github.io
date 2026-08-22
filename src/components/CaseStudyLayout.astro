@@ -1,6 +1,7 @@
 ---
 import { render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
+import MermaidInit from './MermaidInit.astro';
 
 interface Props {
   entry: CollectionEntry<'work'>;
@@ -25,7 +26,12 @@ const year = entry.data.date.getUTCFullYear();
       entry.data.links.length > 0 && (
         <p class="links">
           {entry.data.links.map((link) => (
-            <a href={link.href} rel="noreferrer" target="_blank">
+            <a
+              href={link.href}
+              {...(link.href.startsWith('http')
+                ? { rel: 'noreferrer', target: '_blank' }
+                : {})}
+            >
               {link.label}
             </a>
           ))}
@@ -34,3 +40,5 @@ const year = entry.data.date.getUTCFullYear();
     }
   </div>
 </article>
+
+<MermaidInit />

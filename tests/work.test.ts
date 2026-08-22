@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import {
   FEATURED_SLUGS,
   WORK_FILTERS,
+  WORK_TAGS,
   featuredEntries,
   matchesCategory,
   sortByDateDesc,
@@ -10,13 +11,19 @@ import {
 describe('work helpers', () => {
   it('locks featured order from the spec', () => {
     expect([...FEATURED_SLUGS]).toEqual([
+      'pm-orchestrator',
       'operator-assignment',
       'multi-pallet-palletization',
       'quadtree-dashboard',
       'korao',
       'visit-health-pharmacy',
-      'claw-net',
     ]);
+  });
+
+  it('tags featured selected-work rows', () => {
+    expect(WORK_TAGS['pm-orchestrator']).toEqual(['AI workflows', 'MCP']);
+    expect(WORK_TAGS['operator-assignment']).toEqual(['MILP']);
+    expect(WORK_TAGS['multi-pallet-palletization']).toEqual(['ALNS', 'OR']);
   });
 
   it('lists filters starting with All', () => {
@@ -51,6 +58,6 @@ describe('work helpers', () => {
       { id: 'korao', data: { featured: true, date: new Date('2026-01-01') } },
       { id: 'ascii-camera', data: { featured: false, date: new Date('2022-01-01') } },
     ];
-    expect(featuredEntries(entries).map((e) => e.id)).toEqual(['korao', 'claw-net']);
+    expect(featuredEntries(entries).map((e) => e.id)).toEqual(['korao']);
   });
 });

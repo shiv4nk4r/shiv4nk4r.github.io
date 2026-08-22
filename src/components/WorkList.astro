@@ -1,28 +1,43 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { WORK_TAGS } from '../lib/work';
 
 interface Props {
   entries: CollectionEntry<'work'>[];
-  numbered?: boolean;
+  home?: boolean;
 }
 
-const { entries, numbered = false } = Astro.props;
+const { entries, home = false } = Astro.props;
 const entrySlug = (id: string) => id.replace(/\.md$/, '').split('/').at(-1) ?? id;
 ---
 
-<ol class:list={['work-list', numbered && 'is-numbered']} data-work-list>
+<ol class="work-list" data-work-list>
   {
     entries.map((entry, index) => {
       const year = entry.data.date.getUTCFullYear();
-      const n = String(index + 1).padStart(2, '0');
+      const slug = entrySlug(entry.id);
+      const tags = WORK_TAGS[slug] ?? [];
+      const tagLine = tags.join(' · ');
       return (
         <li class:list={[index === 0 && 'is-first-visible']} data-category={entry.data.category}>
-          <a href={`/work/${entrySlug(entry.id)}`}>
-            <span class="work-title">{entry.data.title}</span>
-            <span class:list={['year', numbered && index === 0 && 'year-mint']}>
-              {numbered ? n : year}
-            </span>
-          </a>
+          {home ? (
+            <div class="work-row">
+              <a class="work-title-link" href={`/work/${slug}`}>
+                {entry.data.title}
+              </a>
+              {tagLine && <span class="work-tags">{tagLine}</span>}
+              {slug === 'korao' && (
+                <a class="work-live" href="https://www.korao.app/" target="_blank" rel="noreferrer">
+                  korao.app
+                </a>
+              )}
+            </div>
+          ) : (
+            <a href={`/work/${slug}`}>
+              <span class="work-title">{entry.data.title}</span>
+              <span class="year">{year}</span>
+            </a>
+          )}
         </li>
       );
     })

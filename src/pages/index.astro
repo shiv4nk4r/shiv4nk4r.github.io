@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArchiveColumns from '../components/ArchiveColumns.astro';
+import GamesBand from '../components/GamesBand.astro';
 import IdentityBand from '../components/IdentityBand.astro';
 import WorkList from '../components/WorkList.astro';
 import { INTRO, SITE_NAME } from '../lib/site';
@@ -14,7 +15,8 @@ const featured = featuredEntries(await getCollection('work'));
   <IdentityBand />
   <div class="wrap rise featured-work" style="animation-delay: 0.08s">
     <h2 class="label">Selected work</h2>
-    <WorkList entries={featured} numbered />
+    <WorkList entries={featured} home />
   </div>
   <ArchiveColumns />
+  <GamesBand />
 </BaseLayout>

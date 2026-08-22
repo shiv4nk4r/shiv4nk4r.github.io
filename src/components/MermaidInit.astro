@@ -1,0 +1,42 @@
+<script is:inline type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.6.0/+esm';
+
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: 'base',
+    securityLevel: 'strict',
+    themeVariables: {
+      fontFamily: 'IBM Plex Sans, sans-serif',
+      fontSize: '14px',
+      primaryColor: '#f7f7f5',
+      primaryTextColor: '#111213',
+      primaryBorderColor: '#111213',
+      lineColor: '#111213',
+      secondaryColor: '#e4e4e0',
+      tertiaryColor: '#f7f7f5',
+      clusterBkg: '#f7f7f5',
+      clusterBorder: '#111213',
+    },
+  });
+
+  const blocks = [...document.querySelectorAll('pre')].filter((pre) => {
+    const code = pre.querySelector('code');
+    const lang = `${pre.className} ${code?.className ?? ''}`;
+    const text = (code ?? pre).textContent?.trim() ?? '';
+    return (
+      lang.includes('language-mermaid') ||
+      /^(flowchart|graph|sequenceDiagram)\b/.test(text)
+    );
+  });
+
+  await Promise.all(
+    blocks.map(async (pre, i) => {
+      const text = (pre.querySelector('code') ?? pre).textContent ?? '';
+      const wrap = document.createElement('div');
+      wrap.className = 'diagram';
+      pre.replaceWith(wrap);
+      const { svg } = await mermaid.render(`diagram-${i}`, text);
+      wrap.innerHTML = svg;
+    }),
+  );
+</script>

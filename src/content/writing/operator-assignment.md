@@ -1,16 +1,10 @@
 ---
 title: Operator assignment
 date: 2025-06-01
-org: GreyOrange
-category: research
-featured: true
 summary: Synchronizing human operators with robotic tasks by modeling assignment as a two-fleet vehicle routing MILP.
-tech: [OptaPlanner, Spring Boot]
-tags: [MILP]
-links:
-  - label: Write-up
-    href: /writing/operator-assignment
 ---
+
+The case study is under Work: [Operator assignment](/work/operator-assignment).
 
 ## Problem
 
@@ -118,8 +112,6 @@ One synchronized meet is easy to write. A shift of them is not. Every candidate 
 That is why “assign the robot, then assign the human” underperforms even a decent heuristic on the joint model. The first-stage tour treats operator time as free. The second stage is stuck chasing a timetable it was not allowed to edit.
 
 I treated the live problem as that two-fleet VRP, not as a matching of people to tickets. The model had to respect skills, pedestrian and robot travel, and the warehouse constraints that a textbook instance leaves out.
-
-Full write-up: [Operator assignment](/writing/operator-assignment).
 
 ## Outcome
 

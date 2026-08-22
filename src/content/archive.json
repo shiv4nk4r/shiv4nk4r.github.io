@@ -1,75 +1,94 @@
 {
   "experience": [
     {
-      "title": "GreyOrange · Operations Research Scientist",
-      "period": "2025–2026",
-      "detail": "R&D for warehouse robotics: operator assignment (VRP) and multi-pallet palletization.",
-      "href": "/work/operator-assignment"
+      "title": "GreyOrange",
+      "period": "Nov 2022–Aug 2026",
+      "detail": "Artificial Intelligence Engineer.",
+      "logo": "/logos/greyorange.png",
+      "logoAlt": "GreyOrange",
+      "roles": [
+        {
+          "title": "Artificial Intelligence Engineer II",
+          "period": "1 yr 8 mos",
+          "detail": "Operator assignment, multi-pallet palletization, and Jira-to-UI generation workflows."
+        },
+        {
+          "title": "SDE 2",
+          "period": "10 mos",
+          "detail": "Manager dashboard and backend systems in Node.js, Erlang, and Spring Boot."
+        },
+        {
+          "title": "Software Developer",
+          "period": "1 yr 5 mos",
+          "detail": "Scalable backends and a hardware integration service for fulfillment systems."
+        }
+      ]
     },
     {
-      "title": "GreyOrange · SDE 2",
-      "period": "2024–2026",
-      "detail": "Manager dashboard and backend systems in Node.js, Erlang, and Spring Boot.",
-      "href": "/work/quadtree-dashboard"
-    },
-    {
-      "title": "GreyOrange · Software Developer",
-      "period": "2022–2024",
-      "detail": "Scalable backends and a hardware integration service for fulfillment systems."
-    },
-    {
-      "title": "Visit Health · Full-stack Developer",
-      "period": "2022",
+      "title": "Visit Health",
+      "role": "Full-stack Developer",
+      "period": "Apr 2022–Nov 2022",
       "detail": "Pharmacy e-commerce in Node.js, SQL, and React.",
-      "href": "/work/visit-health-pharmacy"
+      "logo": "/logos/visit-health.svg",
+      "logoAlt": "Visit Health"
     },
     {
-      "title": "Freelance · Full-stack Developer",
+      "title": "Freelance",
+      "role": "Full-stack Developer",
       "period": "2020–2022",
       "detail": "Product work including a sports pick’em league and commerce PWAs.",
-      "href": "/work/pickem-tournament"
-    },
+      "logo": "/logos/freelance.svg",
+      "logoAlt": "Freelance"
+    }
+  ],
+  "volunteer": [
     {
-      "title": "MPN Technologies · Full-stack Developer",
-      "period": "2018",
-      "detail": "Website and server for a short product engagement."
-    },
-    {
-      "title": "Vikalp · Game Developer Lead",
-      "period": "2018",
-      "detail": "Led an educational Android game and in-house animation tooling."
-    },
-    {
-      "title": "INK, IIIT Delhi · Member",
+      "title": "INK, IIIT Delhi",
+      "role": "Member",
       "period": "2018–2021",
       "detail": "Student technical community at IIITD."
     },
     {
-      "title": "Esya · Event organiser / volunteer",
+      "title": "Esya",
+      "role": "Event organiser / volunteer",
       "period": "2017–2018",
       "detail": "Design hackathon at IIIT Delhi."
     },
     {
-      "title": "SYNC, New Era Public School · Design Head / Computer Prefect",
+      "title": "SYNC, New Era Public School",
+      "role": "Design Head / Computer Prefect",
       "period": "2015–2017",
       "detail": "Student council; graphic, web, and motion work for the school tech team."
     }
   ],
   "education": [
     {
+      "title": "MSc, Advanced Computer Science",
+      "period": "2026–2027",
+      "detail": "Newcastle University, United Kingdom.",
+      "logo": "/logos/newcastle.svg",
+      "logoAlt": "Newcastle University"
+    },
+    {
       "title": "B.Tech, Computer Science and Design",
       "period": "2017–2021",
-      "detail": "Indraprastha Institute of Information Technology, Delhi (IIITD). Double major."
+      "detail": "Indraprastha Institute of Information Technology, Delhi, India.",
+      "logo": "/logos/iiitd.svg",
+      "logoAlt": "IIIT Delhi"
     },
     {
       "title": "Class XII, Computer Science",
       "period": "2016–2017",
-      "detail": "New Era Public School, Mayapuri. CBSE."
+      "detail": "New Era Public School, India. CBSE.",
+      "logo": "/logos/cbse.png",
+      "logoAlt": "CBSE"
     },
     {
       "title": "Class X",
       "period": "2014–2015",
-      "detail": "New Era Public School, Mayapuri. CBSE."
+      "detail": "New Era Public School, India. CBSE.",
+      "logo": "/logos/cbse.png",
+      "logoAlt": "CBSE"
     }
   ],
   "awards": [

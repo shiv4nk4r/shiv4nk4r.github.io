@@ -4,34 +4,92 @@ import archive from '../content/archive.json';
 interface Item {
   title: string;
   detail: string;
+  role?: string;
   period?: string;
   href?: string;
+  logo?: string;
+  logoAlt?: string;
+  roles?: Item[];
 }
 
-const columns: { heading: string; items: Item[] }[] = [
-  { heading: 'Experience', items: archive.experience },
-  { heading: 'Education', items: archive.education },
-  { heading: 'Awards', items: archive.awards },
+const primary: { id: string; heading: string; items: Item[] }[] = [
+  { id: 'experience', heading: 'Experience', items: archive.experience },
+  { id: 'education', heading: 'Education', items: archive.education },
+];
+
+const secondary: { id: string; heading: string; items: Item[] }[] = [
+  { id: 'volunteer', heading: 'Volunteer', items: archive.volunteer },
+  { id: 'awards', heading: 'Awards', items: archive.awards },
 ];
 ---
 
 <section class="archive wrap">
   {
-    columns.map((column) => (
-      <div>
+    primary.map((column) => (
+      <div class="archive-block" id={column.id}>
         <h2>{column.heading}</h2>
-        <ul>
+        <ol class="timeline">
           {column.items.map((item) => (
-            <li>
-              <p>
-                {item.href ? <a href={item.href}>{item.title}</a> : <strong>{item.title}</strong>}
-                {item.period && <span class="year"> {item.period}</span>}
-              </p>
-              <p>{item.detail}</p>
+            <li class="org">
+              <div class="entry">
+                {item.logo && (
+                  <img class="org-logo" src={item.logo} alt={item.logoAlt ?? ''} />
+                )}
+                <div class="entry-copy">
+                  <p class="org-name">
+                    {column.heading !== 'Experience' && item.href ? (
+                      <a href={item.href}>{item.title}</a>
+                    ) : (
+                      item.title
+                    )}
+                  </p>
+                  {item.role && <p class="org-role">{item.role}</p>}
+                  <p class="timeline-detail">{item.detail}</p>
+                </div>
+                {item.period && <p class="year">{item.period}</p>}
+              </div>
+              {item.roles && (
+                <ol class="roles">
+                  {item.roles.map((role) => (
+                    <li class="entry">
+                      <div class="entry-copy">
+                        <p class="role-name">{role.title}</p>
+                        <p class="timeline-detail">{role.detail}</p>
+                      </div>
+                      {role.period && <p class="year">{role.period}</p>}
+                    </li>
+                  ))}
+                </ol>
+              )}
             </li>
           ))}
-        </ul>
+        </ol>
       </div>
     ))
   }
+  <div class="archive-quiet">
+    {
+      secondary.map((column) => (
+        <div class="archive-block is-quiet" id={column.id}>
+          <h2>{column.heading}</h2>
+          <ol class="timeline">
+            {column.items.map((item) => (
+              <li class="org">
+                <div class="entry">
+                  <div class="entry-copy">
+                    <p class="org-name">
+                      {item.href ? <a href={item.href}>{item.title}</a> : item.title}
+                    </p>
+                    {item.role && <p class="org-role">{item.role}</p>}
+                    <p class="timeline-detail">{item.detail}</p>
+                  </div>
+                  {item.period && <p class="year">{item.period}</p>}
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      ))
+    }
+  </div>
 </section>
