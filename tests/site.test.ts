@@ -34,7 +34,7 @@ describe('site constants', () => {
       { href: '/#experience', label: 'Experience' },
       { href: '/#education', label: 'Education' },
       { href: '/writing', label: 'Writing' },
-      { href: '/contact', label: 'Contact' },
+      { href: '/#contact', label: 'Contact' },
     ]);
   });
 

@@ -21,10 +21,12 @@ describe('chrome', () => {
     expect(src).toContain('>{PHONE}</a>');
   });
 
-  it('embeds the Steam widget for Cricket Manager 27', () => {
-    const src = readFileSync('src/components/GamesBand.astro', 'utf8');
+  it('embeds the Steam widgets for Cricket Manager 27 and PlatAttack in Hobbies', () => {
+    const src = readFileSync('src/components/HobbiesBand.astro', 'utf8');
     expect(src).toContain('store.steampowered.com/widget/5072330');
+    expect(src).toContain('store.steampowered.com/widget/5103330');
     expect(src).toContain('Cricket Manager 27');
+    expect(src).toContain('PlatAttack');
     expect(src).toContain('Shushi Studios');
   });
 

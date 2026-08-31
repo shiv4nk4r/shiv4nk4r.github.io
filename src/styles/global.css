@@ -322,7 +322,8 @@ h2,
 }
 
 .archive h2,
-.games h2 {
+.hobbies h2,
+.contact-section h2 {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 500;
@@ -332,26 +333,39 @@ h2,
   margin: 0 0 1.25rem;
 }
 
-.games {
-  padding: 0 0 3rem;
+.hobbies {
+  padding: 0 0 3.5rem;
   scroll-margin-top: 5rem;
 }
 
-.games-lead {
-  max-width: 40rem;
+.hobbies-lead {
+  max-width: 44rem;
   margin: 0 0 1.5rem;
 }
 
-.games .steam-widget {
+.steam-widgets {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.steam-widget {
   max-width: 100%;
   overflow-x: auto;
 }
 
-.games iframe {
+.steam-widget iframe {
   display: block;
   width: 646px;
   height: 190px;
   border: 0;
+}
+
+.contact-section {
+  padding: 0 0 4rem;
+  scroll-margin-top: 5rem;
+  border-top: 1px solid var(--hairline);
+  padding-top: 3.5rem;
 }
 
 .archive .timeline {
