@@ -201,13 +201,12 @@ h2,
   color: var(--mint-on-black);
 }
 
-.featured-work,
-.work-index {
-  padding-top: 3.5rem;
-}
-
-.featured-work {
-  padding-bottom: 1.5rem;
+.archive {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 3.5rem 0 3.5rem;
+  font-size: 0.92rem;
 }
 
 .featured-work .label {
@@ -309,12 +308,13 @@ h2,
   box-shadow: 0 1px 0 var(--mint);
 }
 
-.archive {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  padding: 3.5rem 0 4.5rem;
-  font-size: 0.92rem;
+.featured-work,
+.work-index {
+  padding-top: 2rem;
+}
+
+.featured-work {
+  padding-bottom: 3.5rem;
 }
 
 .archive-block {
@@ -368,12 +368,27 @@ h2,
   padding-top: 3.5rem;
 }
 
+.contact-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-lead {
+  max-width: 36rem;
+  margin: 0 0 1.25rem;
+  color: var(--ink);
+}
+
 .contact-form {
-  margin: 1.5rem 0 2rem;
+  margin: 0 0 2.5rem;
+  width: 100%;
   max-width: 36rem;
   display: flex;
   flex-direction: column;
   gap: 1.1rem;
+  text-align: left;
 }
 
 .contact-form .form-row {
@@ -435,8 +450,8 @@ h2,
 }
 
 .contact-form .form-submit {
-  align-self: flex-start;
-  padding: 0.6rem 1.4rem;
+  align-self: center;
+  padding: 0.65rem 2rem;
   font-family: var(--font-mono);
   font-size: 0.8rem;
   font-weight: 500;
@@ -455,8 +470,41 @@ h2,
   color: #ffffff;
 }
 
-.contact-socials {
-  margin-top: 1.5rem;
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem 1.75rem;
+  font-size: 0.88rem;
+  color: var(--ink);
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.15s ease;
+}
+
+.contact-link .icon {
+  flex-shrink: 0;
+  color: var(--muted);
+  transition: color 0.15s ease;
+}
+
+.contact-link:hover {
+  color: var(--mint);
+}
+
+.contact-link:hover .icon {
+  color: var(--mint);
+}
+
+.contact-section h2 {
+  text-align: center;
 }
 
 .archive .timeline {

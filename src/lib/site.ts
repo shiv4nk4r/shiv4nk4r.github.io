@@ -24,14 +24,13 @@ export const PHONE_TEL = '+447352697394';
 export const LINKS = {
   linkedin: 'https://www.linkedin.com/in/shiv4nk4r',
   github: 'https://github.com/shiv4nk4r',
-  behance: 'https://www.behance.net/shivankar199',
   resume: '/ShivankarSharma.pdf',
 } as const;
 
 export const NAV = [
-  { href: '/work', label: 'Work' },
   { href: '/#experience', label: 'Experience' },
   { href: '/#education', label: 'Education' },
+  { href: '/work', label: 'Work' },
   { href: '/writing', label: 'Writing' },
   { href: '/#contact', label: 'Contact' },
 ] as const;

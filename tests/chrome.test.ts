@@ -16,11 +16,11 @@ describe('chrome', () => {
     expect(emailAt).toBeGreaterThan(-1);
     expect(phoneAt).toBeGreaterThan(emailAt);
     expect(src.toLowerCase()).not.toMatch(/seeking|for hire/);
-    expect(src.match(/\{' · '\}/g)).toHaveLength(3);
     expect(src).toContain('href={`tel:${PHONE_TEL}`}');
-    expect(src).toContain('>{PHONE}</a>');
+    expect(src).toContain('>{PHONE}</span>');
     expect(src).toContain('contact-form');
     expect(src).toContain('mailto:');
+    expect(src).not.toContain('behance');
   });
 
   it('embeds the Steam widgets for Cricket Manager 27 and PlatAttack in Hobbies', () => {

@@ -14,11 +14,11 @@ const featured = featuredEntries(await getCollection('work'));
 
 <BaseLayout title={SITE_NAME} description={INTRO} path="/">
   <IdentityBand />
+  <ArchiveColumns />
   <div class="wrap rise featured-work" style="animation-delay: 0.08s">
     <h2 class="label">Selected work</h2>
     <WorkList entries={featured} home />
   </div>
-  <ArchiveColumns />
   <HobbiesBand />
   <section class="contact-section wrap" id="contact">
     <h2>Contact</h2>

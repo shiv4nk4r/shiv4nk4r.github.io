@@ -30,9 +30,9 @@ describe('site constants', () => {
 
   it('exposes nav in spec order', () => {
     expect(NAV).toEqual([
-      { href: '/work', label: 'Work' },
       { href: '/#experience', label: 'Experience' },
       { href: '/#education', label: 'Education' },
+      { href: '/work', label: 'Work' },
       { href: '/writing', label: 'Writing' },
       { href: '/#contact', label: 'Contact' },
     ]);
@@ -57,7 +57,6 @@ describe('site constants', () => {
     expect(LINKS).toEqual({
       linkedin: 'https://www.linkedin.com/in/shiv4nk4r',
       github: 'https://github.com/shiv4nk4r',
-      behance: 'https://www.behance.net/shivankar199',
       resume: '/ShivankarSharma.pdf',
     });
   });
