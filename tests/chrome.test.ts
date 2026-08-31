@@ -19,6 +19,8 @@ describe('chrome', () => {
     expect(src.match(/\{' · '\}/g)).toHaveLength(3);
     expect(src).toContain('href={`tel:${PHONE_TEL}`}');
     expect(src).toContain('>{PHONE}</a>');
+    expect(src).toContain('contact-form');
+    expect(src).toContain('mailto:');
   });
 
   it('embeds the Steam widgets for Cricket Manager 27 and PlatAttack in Hobbies', () => {

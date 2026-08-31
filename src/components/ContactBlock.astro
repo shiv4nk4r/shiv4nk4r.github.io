@@ -5,7 +5,55 @@ import { EMAIL, LINKS, PHONE, PHONE_TEL } from '../lib/site';
 <div class="contact-block">
   <p>Email is the most reliable way to reach me.</p>
   <p><a href={`mailto:${EMAIL}`}>{EMAIL}</a></p>
-  <p>
+
+  <form class="contact-form" id="contact-form" action={`mailto:${EMAIL}`} method="GET">
+    <div class="form-row">
+      <div class="form-field">
+        <label for="contact-name">Name</label>
+        <input
+          type="text"
+          id="contact-name"
+          name="name"
+          placeholder="Your name"
+          required
+          autocomplete="name"
+        />
+      </div>
+      <div class="form-field">
+        <label for="contact-email">Email</label>
+        <input
+          type="email"
+          id="contact-email"
+          name="email"
+          placeholder="your.email@example.com"
+          required
+          autocomplete="email"
+        />
+      </div>
+    </div>
+    <div class="form-field">
+      <label for="contact-subject">Subject</label>
+      <input
+        type="text"
+        id="contact-subject"
+        name="subject"
+        placeholder="Subject / topic"
+      />
+    </div>
+    <div class="form-field">
+      <label for="contact-message">Message</label>
+      <textarea
+        id="contact-message"
+        name="message"
+        rows="4"
+        placeholder="Write your message here..."
+        required
+      ></textarea>
+    </div>
+    <button type="submit" class="form-submit">Send Email</button>
+  </form>
+
+  <p class="contact-socials">
     <a href={LINKS.linkedin} rel="noreferrer" target="_blank">LinkedIn</a>{' · '}<a
       href={LINKS.github}
       rel="noreferrer"
@@ -18,3 +66,30 @@ import { EMAIL, LINKS, PHONE, PHONE_TEL } from '../lib/site';
   </p>
   <p class="phone"><a href={`tel:${PHONE_TEL}`}>{PHONE}</a></p>
 </div>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nameInput = document.getElementById('contact-name') as HTMLInputElement | null;
+      const emailInput = document.getElementById('contact-email') as HTMLInputElement | null;
+      const subjectInput = document.getElementById('contact-subject') as HTMLInputElement | null;
+      const messageInput = document.getElementById('contact-message') as HTMLTextAreaElement | null;
+
+      const name = nameInput?.value.trim() || '';
+      const email = emailInput?.value.trim() || '';
+      const subjectText = subjectInput?.value.trim() || `Message from ${name || 'Portfolio Visitor'}`;
+      const message = messageInput?.value.trim() || '';
+
+      let body = message;
+      if (name || email) {
+        body += `\n\n---\nFrom: ${name} <${email}>`;
+      }
+
+      const toEmail = 'devwithshiv@gmail.com';
+      const mailtoUrl = `mailto:${toEmail}?subject=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoUrl;
+    });
+  }
+</script>
