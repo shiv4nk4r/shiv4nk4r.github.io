@@ -50,7 +50,7 @@ describe('archive.json', () => {
     expect(archive.education[0].title).toMatch(/Advanced Computer Science/);
     expect(archive.education[0].detail).toMatch(/Newcastle University/);
     expect(archive.education[0].period).toBe('2026–2027');
-    expect(archive.education[0].logo).toBe('/logos/newcastle.png');
+    expect(archive.education[0].logo).toBe('/logos/newcastle.svg');
   });
 
   it('includes IIITD in education', () => {
