@@ -65,28 +65,28 @@
     {
       "title": "MSc, Advanced Computer Science",
       "period": "2026–2027",
-      "detail": "Newcastle University, United Kingdom.",
-      "logo": "/logos/newcastle.svg",
+      "detail": "<a href=\"https://www.ncl.ac.uk\" target=\"_blank\" rel=\"noreferrer\">Newcastle University</a>, United Kingdom.",
+      "logo": "/logos/newcastle.png",
       "logoAlt": "Newcastle University"
     },
     {
       "title": "B.Tech, Computer Science and Design",
       "period": "2017–2021",
-      "detail": "Indraprastha Institute of Information Technology, Delhi, India.",
+      "detail": "<a href=\"https://iiitd.ac.in\" target=\"_blank\" rel=\"noreferrer\">Indraprastha Institute of Information Technology</a>, Delhi, India.",
       "logo": "/logos/iiitd.svg",
       "logoAlt": "IIIT Delhi"
     },
     {
       "title": "Class XII, Computer Science",
       "period": "2016–2017",
-      "detail": "New Era Public School, India. CBSE.",
+      "detail": "CBSE, Delhi, India.",
       "logo": "/logos/cbse.png",
       "logoAlt": "CBSE"
     },
     {
       "title": "Class X",
       "period": "2014–2015",
-      "detail": "New Era Public School, India. CBSE.",
+      "detail": "CBSE, Delhi, India.",
       "logo": "/logos/cbse.png",
       "logoAlt": "CBSE"
     }

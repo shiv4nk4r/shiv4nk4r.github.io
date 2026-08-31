@@ -44,7 +44,7 @@ const secondary: { id: string; heading: string; items: Item[] }[] = [
                     )}
                   </p>
                   {item.role && <p class="org-role">{item.role}</p>}
-                  <p class="timeline-detail">{item.detail}</p>
+                  <p class="timeline-detail" set:html={item.detail} />
                 </div>
                 {item.period && <p class="year">{item.period}</p>}
               </div>
@@ -54,7 +54,7 @@ const secondary: { id: string; heading: string; items: Item[] }[] = [
                     <li class="entry">
                       <div class="entry-copy">
                         <p class="role-name">{role.title}</p>
-                        <p class="timeline-detail">{role.detail}</p>
+                        <p class="timeline-detail" set:html={role.detail} />
                       </div>
                       {role.period && <p class="year">{role.period}</p>}
                     </li>
@@ -81,7 +81,7 @@ const secondary: { id: string; heading: string; items: Item[] }[] = [
                       {item.href ? <a href={item.href}>{item.title}</a> : item.title}
                     </p>
                     {item.role && <p class="org-role">{item.role}</p>}
-                    <p class="timeline-detail">{item.detail}</p>
+                    <p class="timeline-detail" set:html={item.detail} />
                   </div>
                   {item.period && <p class="year">{item.period}</p>}
                 </div>
